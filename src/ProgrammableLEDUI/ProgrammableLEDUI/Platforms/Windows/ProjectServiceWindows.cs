@@ -22,7 +22,7 @@ namespace ProgrammableLEDUI.Platforms.Windows
 
         public List<ProjectModel> GetProjects()
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         public void SaveProject(ProjectModel project)
