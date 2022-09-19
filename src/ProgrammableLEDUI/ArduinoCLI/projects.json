@@ -748,5 +748,25 @@
         "DelayToNextScene": null
       }
     ]
+  },
+  {
+    "$id": "80",
+    "ID": "a4be5eee-2e36-452e-99dc-9af58bdcecc2",
+    "Name": null,
+    "AmountOfPixels": 155,
+    "Scenes": [
+      {
+        "$id": "81",
+        "ID": "e37fb9e0-fe57-45e9-948a-a4a0bede5f90",
+        "Name": null,
+        "Project": {
+          "$ref": "80"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
   }
 ]
