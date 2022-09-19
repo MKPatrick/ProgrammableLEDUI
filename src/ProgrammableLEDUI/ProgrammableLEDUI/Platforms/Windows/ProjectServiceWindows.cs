@@ -1,4 +1,5 @@
-﻿using ProgrammableLEDUI.Models;
+﻿using Newtonsoft.Json;
+using ProgrammableLEDUI.Models;
 using ProgrammableLEDUI.Services;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,19 @@ namespace ProgrammableLEDUI.Platforms.Windows
 {
     internal class ProjectServiceWindows : IProjectService
     {
+        private const string PROJECTSPath = "C:\\Develop\\ProgrammableLEDUI\\src\\ProgrammableLEDUI\\ArduinoCLI\\projects.json";
+        private List<ProjectModel> _allProjects;
+
+        public ProjectServiceWindows()
+        {
+            _allProjects = new();
+            _allProjects = LoadAllProjects();
+        }
+
         public void CreateNewProject(ProjectModel project)
         {
-            throw new NotImplementedException();
+            _allProjects.Add(project);
+            SaveAllProjects();
         }
 
         public void DeleteProjectByID(int ID)
@@ -22,12 +33,33 @@ namespace ProgrammableLEDUI.Platforms.Windows
 
         public List<ProjectModel> GetProjects()
         {
-            return null;
+            return _allProjects;
         }
 
         public void SaveProject(ProjectModel project)
         {
-            throw new NotImplementedException();
+
         }
+
+
+        private List<ProjectModel> LoadAllProjects()
+        {
+            if (!File.Exists(PROJECTSPath))
+            {
+                return new List<ProjectModel>();
+            }
+            var json = File.ReadAllText(PROJECTSPath);
+            return JsonConvert.DeserializeObject<List<ProjectModel>>(json,
+          new JsonSerializerSettings { PreserveReferencesHandling = PreserveReferencesHandling.Objects });
+        }
+
+
+        private void SaveAllProjects()
+        {
+            string json = JsonConvert.SerializeObject(_allProjects, Formatting.Indented,
+     new JsonSerializerSettings { PreserveReferencesHandling = PreserveReferencesHandling.Objects });
+            File.WriteAllText(PROJECTSPath, json);
+        }
+
     }
 }

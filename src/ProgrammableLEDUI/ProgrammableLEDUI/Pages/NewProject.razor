@@ -1,0 +1,36 @@
+﻿@page "/NewProject"
+<h3>Create new project</h3>
+@inject Services.IProjectService projectService;
+<EditForm Model="@project" OnValidSubmit="Submit">
+
+    <div class="form-group">
+        <label for="projectName">Project-Name:</label>
+        <input @bind-value="project.Name" type="text" class="form-control" id="projectName" aria-describedby="projectName" placeholder="Project Name">
+    </div>
+
+    <div class="form-group">
+        <label for="ledAmount">LED-Amount:</label>
+        <input @bind-value="project.AmountOfPixels" type="number" class="form-control" id="ledAmount" aria-describedby="projectName" placeholder="Amount of LEDs">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm>
+
+@code {
+
+
+
+    ProjectModel project;
+    protected override async Task OnInitializedAsync()
+    {
+        project = new();
+        project.ID = Guid.NewGuid().ToString();
+    }
+
+    async Task Submit()
+    {
+        projectService.CreateNewProject(project);
+    }
+
+}

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProgrammableLEDUI.Models
 {
+    [Serializable]
     public class LEDPixelModel
     {
         public int PixelIndex { get; set; }

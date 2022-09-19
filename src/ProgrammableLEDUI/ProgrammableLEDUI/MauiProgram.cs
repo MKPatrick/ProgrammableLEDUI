@@ -22,7 +22,9 @@ public static class MauiProgram
 #endif
 
 #if WINDOWS
-        builder.Services.AddTransient<IProjectService, ProjectServiceWindows>();
+        builder.Services.AddSingleton<IProjectService, ProjectServiceWindows>();
+        builder.Services.AddTransient<ITranspileService, TranspileToArduinoService>();
+        builder.Services.AddTransient<ICompileAndUploadService, ArduinoService>();
 #endif
 
 

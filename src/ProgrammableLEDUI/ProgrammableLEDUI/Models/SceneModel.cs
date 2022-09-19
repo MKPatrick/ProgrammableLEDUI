@@ -1,5 +1,6 @@
 ﻿namespace ProgrammableLEDUI.Models
 {
+    [Serializable]
     public class SceneModel
     {
         public int ID { get; set; }

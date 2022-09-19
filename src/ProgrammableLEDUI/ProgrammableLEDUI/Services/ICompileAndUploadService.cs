@@ -23,6 +23,10 @@ public interface ICompileAndUploadService
     /// <returns>False if compile Failed, True if done</returns>
     bool CompileAndUpload(string target);
 
-
+    /// <summary>
+    /// Gets all available targets
+    /// </summary>
+    /// <returns></returns>
+    IEnumerable<string> GetTargets();
 
 }

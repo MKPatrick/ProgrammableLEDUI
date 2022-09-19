@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inject NavigationManager navigationmanager;
 @inject ProgrammableLEDUI.Services.IProjectService projectService;
 <link href="css/ProjectOverview.css" rel="stylesheet" />
 <div class="container">
@@ -7,38 +8,62 @@
         <div class="col-3">
             <div class="card cardhover">
                 <img class="card-img-top" width="150" height="150" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/001/024/medium640/Screen_Shot_2015-05-07_at_8.19.13_AM.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Arduino Setup</h5>
-                <p class="card-text">Setup your Arduino-IDE for working with your Controller and LED-Stripe.</p>
-                <a href="#" class="btn btn-primary">Setup Arduino</a>
+                <div class="card-body">
+                    <h5 class="card-title">Arduino Setup</h5>
+                    <p class="card-text">Setup your Arduino-IDE for working with your Controller and LED-Stripe.</p>
+                    <a href="#" class="btn btn-primary">Setup Arduino</a>
+                </div>
             </div>
-        </div>
         </div>
 
     </div>
 
     <div class="row">
         <h2>Projects:</h2>
-        @foreach (var project in projects)
-        {
+        <div class="col-3">
+            <div class="card cardhover">
+                <img class="card-img-top" width="150" height="150" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/001/024/medium640/Screen_Shot_2015-05-07_at_8.19.13_AM.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">New project</h5>
+                    <p class="card-text">Creates an empty project</p>
+                    <button @onclick="CreateNewProject" class="btn btn-primary">Create New👻</button>
+                </div>
+            </div>
+        </div>
+        
+        @foreach(var item in projects)
+         {
             <div class="col-3">
                 <div class="card cardhover">
-                         <h5 class="card-title">@project.Name</h5>
+                    <img class="card-img-top" width="150" height="150" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/001/024/medium640/Screen_Shot_2015-05-07_at_8.19.13_AM.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text">Your project.</p>
+                        <a href="#" class="btn btn-primary">Work with me!😶</a>
                     </div>
+                </div>
             </div>
-        }
-    
+         }
+
+
+      
+
+
     </div>
 
 </div>
 
 @code
 {
-    List<ProjectModel> projects=new();
 
+    List<ProjectModel> projects = new();
     protected override async Task OnInitializedAsync()
     {
-        projects=projectService.GetProjects();
+        projects = projectService.GetProjects();
     }
 
+    async Task CreateNewProject()
+    {
+        navigationmanager.NavigateTo("/NewProject");
+    }
 }
