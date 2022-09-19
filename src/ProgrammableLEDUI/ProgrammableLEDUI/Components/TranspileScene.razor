@@ -1,0 +1,18 @@
+﻿@inject Services.ITranspileService transpileService;
+<h3>TranspileScene</h3>
+<button @onclick="Transpile" class="button button-primary">Transpile</button>
+<textarea>
+    @transpiledSource
+</textarea>
+
+@code {
+    [Parameter]
+    public SceneModel Scene { get; set; }
+
+    private string transpiledSource;
+
+    async Task Transpile()
+    {
+        transpiledSource = transpileService.TranspileSceneToCode(Scene);
+    }
+}

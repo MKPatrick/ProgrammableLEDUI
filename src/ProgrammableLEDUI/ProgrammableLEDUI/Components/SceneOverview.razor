@@ -1,0 +1,53 @@
+﻿
+
+
+<div class="rowCustom">
+    @foreach (var item in Project.Scenes)
+    {
+        <div class="cardGlass sceneItem" @onclick="()=>SceneChanged(item)">
+            <p>
+                @if (item.Name == string.Empty)
+                    @item.ID
+                else
+                    @item.Name
+                </p>
+            </div>
+    }
+
+
+    <div class="cardGlass sceneItem" @onclick="AddNewScene">
+        <p>
+            Create new Scene➕
+        </p>
+    </div>
+
+
+</div>
+@code {
+
+    [Parameter]
+    public ProjectModel Project { get; set; }
+
+
+    [Parameter]
+    public EventCallback<SceneModel> NewSceneAdded { get; set; }
+
+
+    [Parameter]
+    public EventCallback<SceneModel> SceneSelectionChanged { get; set; }
+
+    async Task AddNewScene()
+    {
+        SceneModel model = new SceneModel() {NewPixels=new(), ID = Guid.NewGuid().ToString() };
+        Project.Scenes.Add(model);
+        await NewSceneAdded.InvokeAsync((model));
+    }
+
+
+    async Task SceneChanged(SceneModel scene)
+    {
+
+        await SceneSelectionChanged.InvokeAsync((scene));
+    }
+
+}

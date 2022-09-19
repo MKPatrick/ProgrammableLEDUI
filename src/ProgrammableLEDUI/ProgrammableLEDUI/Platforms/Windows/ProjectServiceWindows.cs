@@ -26,9 +26,14 @@ namespace ProgrammableLEDUI.Platforms.Windows
             SaveAllProjects();
         }
 
-        public void DeleteProjectByID(int ID)
+        public void DeleteProjectByID(string ID)
         {
             throw new NotImplementedException();
+        }
+
+        public ProjectModel GetProjectByID(string ID)
+        {
+            return _allProjects.First(x => x.ID == ID);
         }
 
         public List<ProjectModel> GetProjects()
@@ -38,7 +43,7 @@ namespace ProgrammableLEDUI.Platforms.Windows
 
         public void SaveProject(ProjectModel project)
         {
-
+            SaveAllProjects();
         }
 
 

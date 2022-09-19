@@ -1,0 +1,54 @@
+﻿@page "/ProjectEdit/{identifier}"
+
+@inject ProgrammableLEDUI.Services.IProjectService projectService;
+
+
+
+
+<div class="pixelUI">
+    <ProgrammableLEDUI.Components.PixelUI Project="project" />
+</div>
+<div class="sceneOverview">
+    <ProgrammableLEDUI.Components.SceneOverview SceneSelectionChanged="CurrentSceneChanged" Project="project" NewSceneAdded="NewSceneAdded" />
+</div>
+<div class="propertyPixels">
+    <div class="propertyScene">
+        <ProgrammableLEDUI.Components.PropertyScene Scene="currentScene" />
+    </div>
+    <div class="propertyScene">
+        <ProgrammableLEDUI.Components.PropertyPixel Pixel="currentPixel" />
+    </div>
+    <div class="propertyScene">
+        <ProgrammableLEDUI.Components.TranspileScene Scene="currentScene" />
+    </div>
+</div>
+
+
+
+@code {
+    [Parameter]
+    public string identifier { get; set; }
+
+    private ProjectModel project;
+    private SceneModel currentScene;
+    private LEDPixelModel currentPixel;
+    protected override async Task OnInitializedAsync()
+    {
+        project = projectService.GetProjectByID(identifier);
+        if (project.Scenes.Count() > 0)
+            currentScene = project.Scenes[0];
+    }
+
+
+    async Task NewSceneAdded(SceneModel newScene)
+    {
+        newScene.Project = project;
+        projectService.SaveProject(project);
+    }
+
+
+    async Task CurrentSceneChanged(SceneModel scene)
+    {
+        currentScene = scene;
+    }
+}

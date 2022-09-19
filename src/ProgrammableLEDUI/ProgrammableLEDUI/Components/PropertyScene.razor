@@ -1,0 +1,30 @@
+﻿<h3>PropertyScene @Scene?.Name</h3>
+<div class="form-group">
+    <label for="Name">Scene Name</label>
+    <input @bind-value=@Scene.Name type="text" class="form-control" id="Name" placeholder="Scene Name">
+ </div>
+
+
+<div class="form-group">
+    <label for="Brightness">Brighntess</label>
+    <input @bind-value=@Scene.NewBrightness type="number" class="form-control" id="Brightness" placeholder="Brightness">
+</div>
+
+
+<div class="form-group">
+    <label for="Pixels">Delay Pixels</label>
+    <input @bind-value=@Scene.DelayBetweenPixels type="number" class="form-control" id="Pixels" placeholder="Delay between Pixels in ms">
+</div>
+
+
+
+<div class="form-group">
+    <label for="DelayToNextScene">Delay Pixels</label>
+    <input @bind-value=@Scene.DelayToNextScene type="number" class="form-control" id="DelayToNextScene" placeholder="Delay to next scene">
+</div>
+
+
+@code {
+    [Parameter]
+    public SceneModel Scene { get; set; }
+}

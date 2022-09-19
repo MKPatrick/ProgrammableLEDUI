@@ -3,9 +3,10 @@
     [Serializable]
     public class SceneModel
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
+
+        public string Name { get; set; }
         public ProjectModel Project { get; set; }
-        public int ProjectID { get; set; }
 
         public List<LEDPixelModel> NewPixels { get; set; }
 

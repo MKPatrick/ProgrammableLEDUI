@@ -1,0 +1,13 @@
+﻿<h3>PixelUI</h3>
+
+@for(int i=0; i<Project.AmountOfPixels; i++)
+{
+    <SinglePixel />
+}
+    
+
+
+@code {
+    [Parameter]
+    public ProjectModel Project { get; set; }
+}

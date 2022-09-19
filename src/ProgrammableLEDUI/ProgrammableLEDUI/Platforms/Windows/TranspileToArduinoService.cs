@@ -24,7 +24,6 @@ namespace ProgrammableLEDUI.Platforms.Windows
         {
             StringBuilder stringBuilder = new();
 
-
             foreach (var pixel in scene.NewPixels)
             {
                 stringBuilder.AppendLine(SetPixelColor(pixel));
@@ -47,9 +46,6 @@ namespace ProgrammableLEDUI.Platforms.Windows
 
         }
 
-
-
-
         private string ShowPixels()
         {
             return "pixels.show();";
@@ -63,7 +59,6 @@ namespace ProgrammableLEDUI.Platforms.Windows
         {
             return $"pixels.setBrightness({brightness});";
         }
-
 
         private string SetPixelColor(LEDPixelModel pixel)
         {
