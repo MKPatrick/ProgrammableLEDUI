@@ -1,13 +1,67 @@
 ﻿<h3>PixelUI</h3>
 
-@for(int i=0; i<Project.AmountOfPixels; i++)
+@foreach(var pixel in pixels)
 {
-    <SinglePixel />
+    <div @onclick="()=>PixelClicked(pixel)" style="display: inline-block">
+        <SinglePixel Pixel="pixel" />
+    </div>
 }
-    
+
 
 
 @code {
+
+    [Parameter]
+    public EventCallback<LEDPixelModel> PixelGetClicked { get; set; }
+
+    private SceneModel currentScene;
+    [Parameter]
+    public SceneModel CurrentScene
+    {
+        get { return currentScene; }
+        set
+        {
+            currentScene = value;
+            UpdatePixels();
+        }
+    }
+
     [Parameter]
     public ProjectModel Project { get; set; }
+
+    LEDPixelModel[] pixels;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+
+    }
+
+    async Task PixelClicked(LEDPixelModel pixel)
+    {
+        await PixelGetClicked.InvokeAsync(pixel);
+    }
+
+    void UpdatePixels()
+    {
+        Console.WriteLine("Update Pixels!");
+        pixels = new LEDPixelModel[Project.AmountOfPixels];
+        foreach (var item in currentScene.NewPixels)
+        {
+            pixels[item.PixelIndex] = item;
+        }
+
+        for (int i = 0; i < pixels.Length; i++)
+        {
+            if(pixels[i]==null)
+            {
+                pixels[i] = new LEDPixelModel() { PixelColor = Color.FromHex("#c0392b"), PixelIndex = i };
+            }
+        }
+    
+
+    }
+
+
+
 }

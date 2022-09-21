@@ -6,7 +6,7 @@
 
 
 <div class="pixelUI">
-    <ProgrammableLEDUI.Components.PixelUI Project="project" />
+    <ProgrammableLEDUI.Components.PixelUI PixelGetClicked="PixelClicked" Project="project" CurrentScene="currentScene" />
 </div>
 <div class="sceneOverview">
     <ProgrammableLEDUI.Components.SceneOverview SceneSelectionChanged="CurrentSceneChanged" Project="project" NewSceneAdded="NewSceneAdded" />
@@ -50,5 +50,15 @@
     async Task CurrentSceneChanged(SceneModel scene)
     {
         currentScene = scene;
+    }
+
+
+    async Task PixelClicked(LEDPixelModel pixel)
+    {
+        if (currentScene.NewPixels.FirstOrDefault(x => x.PixelIndex == pixel.PixelIndex) == null)
+        {
+            currentScene.NewPixels.Add(pixel);
+        }
+        currentPixel = pixel;
     }
 }

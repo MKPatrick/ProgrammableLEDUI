@@ -62,7 +62,9 @@ namespace ProgrammableLEDUI.Platforms.Windows
 
         private string SetPixelColor(LEDPixelModel pixel)
         {
-            return $"pixels.setPixelColor({pixel.PixelIndex}, pixels.Color({pixel.PixelColor.Red}, {pixel.PixelColor.Green}, {pixel.PixelColor.Blue}));";
+            byte[] colors = new byte[3];
+            pixel.PixelColor.ToRgb(out colors[0], out colors[1], out colors[2]);
+            return $"pixels.setPixelColor({pixel.PixelIndex}, pixels.Color({colors[0]}, {colors[1]}, {colors[2]}));";
         }
 
     }

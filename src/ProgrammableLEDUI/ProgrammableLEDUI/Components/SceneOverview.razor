@@ -10,6 +10,7 @@
                     @item.ID
                 else
                     @item.Name
+
                 </p>
             </div>
     }
@@ -25,8 +26,10 @@
 </div>
 @code {
 
+
     [Parameter]
     public ProjectModel Project { get; set; }
+
 
 
     [Parameter]
@@ -38,7 +41,7 @@
 
     async Task AddNewScene()
     {
-        SceneModel model = new SceneModel() {NewPixels=new(), ID = Guid.NewGuid().ToString() };
+        SceneModel model = new SceneModel() { NewPixels = new(), ID = Guid.NewGuid().ToString() };
         Project.Scenes.Add(model);
         await NewSceneAdded.InvokeAsync((model));
     }
@@ -49,5 +52,7 @@
 
         await SceneSelectionChanged.InvokeAsync((scene));
     }
+
+
 
 }

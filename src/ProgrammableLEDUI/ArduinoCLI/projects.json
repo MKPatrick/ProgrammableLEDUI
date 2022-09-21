@@ -758,9 +758,436 @@
       {
         "$id": "81",
         "ID": "e37fb9e0-fe57-45e9-948a-a4a0bede5f90",
+        "Name": "32",
+        "Project": {
+          "$ref": "80"
+        },
+        "NewPixels": [],
+        "NewBrightness": 32,
+        "DelayBetweenPixels": 23,
+        "DelayToNextScene": null
+      },
+      {
+        "$id": "82",
+        "ID": "066057a0-d2c1-44d0-86dd-74afefc90e95",
         "Name": null,
         "Project": {
           "$ref": "80"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "83",
+    "ID": "b887ab0e-0b68-4eac-88b5-af5e513c7502",
+    "Name": "123",
+    "AmountOfPixels": 15,
+    "Scenes": [
+      {
+        "$id": "84",
+        "ID": "979cdc68-9539-4556-982f-4ce0361fbe4b",
+        "Name": null,
+        "Project": {
+          "$ref": "83"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "85",
+    "ID": "1b2ce1d7-c5c0-40d2-b4e3-96574ad547c6",
+    "Name": "123",
+    "AmountOfPixels": 12,
+    "Scenes": [
+      {
+        "$id": "86",
+        "ID": "35a52e77-d6b5-4a17-b549-1ea686048d74",
+        "Name": null,
+        "Project": {
+          "$ref": "85"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "87",
+    "ID": "b164b119-32ce-4197-a333-1a6b3c9ad420",
+    "Name": "123",
+    "AmountOfPixels": 12,
+    "Scenes": [
+      {
+        "$id": "88",
+        "ID": "13002a35-d558-4975-a71e-0c0e8d9d04aa",
+        "Name": null,
+        "Project": {
+          "$ref": "87"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "89",
+    "ID": "345d1f68-8e76-4e08-87a1-6af4648bbd1f",
+    "Name": "123",
+    "AmountOfPixels": 123,
+    "Scenes": [
+      {
+        "$id": "90",
+        "ID": "9f7712b9-afbc-4a1b-9d29-05f9822d8842",
+        "Name": null,
+        "Project": {
+          "$ref": "89"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      },
+      {
+        "$id": "91",
+        "ID": "a6fcc80a-569f-4d6c-8a72-fda2de348f41",
+        "Name": null,
+        "Project": {
+          "$ref": "89"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "92",
+    "ID": "cc67797d-4b1d-4f22-b2bf-56805ad59d68",
+    "Name": "123",
+    "AmountOfPixels": 123,
+    "Scenes": [
+      {
+        "$id": "93",
+        "ID": "e255b9f3-45bf-4956-964d-fee76104a033",
+        "Name": null,
+        "Project": {
+          "$ref": "92"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "94",
+    "ID": "49ef399e-019e-4c9d-a359-1c31beb51fcc",
+    "Name": "1123",
+    "AmountOfPixels": 12,
+    "Scenes": [
+      {
+        "$id": "95",
+        "ID": "1ec99f79-123b-4514-8924-00878de23247",
+        "Name": null,
+        "Project": {
+          "$ref": "94"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      },
+      {
+        "$id": "96",
+        "ID": "73da7d83-8841-4b2a-b563-c92220848d7f",
+        "Name": null,
+        "Project": {
+          "$ref": "94"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "97",
+    "ID": "f4360b23-7a4e-4c40-b839-273646a6579c",
+    "Name": "123",
+    "AmountOfPixels": 123,
+    "Scenes": [
+      {
+        "$id": "98",
+        "ID": "e7a463bb-ffb4-411d-9031-f4060f67447f",
+        "Name": null,
+        "Project": {
+          "$ref": "97"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      },
+      {
+        "$id": "99",
+        "ID": "a51af12f-bdba-4119-a1d7-ae334813ef5d",
+        "Name": null,
+        "Project": {
+          "$ref": "97"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "100",
+    "ID": "4d5462b2-99cd-44b3-8987-7877231929cc",
+    "Name": "123",
+    "AmountOfPixels": 123,
+    "Scenes": [
+      {
+        "$id": "101",
+        "ID": "bd269276-3db2-476a-8d2a-5cd179ac0953",
+        "Name": null,
+        "Project": {
+          "$ref": "100"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "102",
+    "ID": "1a5d2b8b-c4d8-4d9c-b5e2-865913bc0907",
+    "Name": "132",
+    "AmountOfPixels": 5,
+    "Scenes": [
+      {
+        "$id": "103",
+        "ID": "6a152e8a-1917-4697-bac2-2d6a852dd213",
+        "Name": null,
+        "Project": {
+          "$ref": "102"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "104",
+    "ID": "e1c72cb8-6964-4160-8334-a92d3ab1e8d4",
+    "Name": "123",
+    "AmountOfPixels": 12,
+    "Scenes": [
+      {
+        "$id": "105",
+        "ID": "e690cef9-d2b5-40c0-89c8-41684aec30c1",
+        "Name": null,
+        "Project": {
+          "$ref": "104"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "106",
+    "ID": "3e2b9877-eecc-4aeb-8bfe-909166732226",
+    "Name": "13",
+    "AmountOfPixels": 5,
+    "Scenes": [
+      {
+        "$id": "107",
+        "ID": "e6fe6dde-aa33-478c-91ae-4b08607c38a0",
+        "Name": null,
+        "Project": {
+          "$ref": "106"
+        },
+        "NewPixels": [
+          {
+            "$id": "108",
+            "PixelIndex": 0,
+            "PixelColor": "#22170C"
+          },
+          {
+            "$id": "109",
+            "PixelIndex": 1,
+            "PixelColor": "#22170C"
+          },
+          {
+            "$id": "110",
+            "PixelIndex": 2,
+            "PixelColor": "#22170C"
+          },
+          {
+            "$id": "111",
+            "PixelIndex": 3,
+            "PixelColor": "#22170C"
+          },
+          {
+            "$id": "112",
+            "PixelIndex": 4,
+            "PixelColor": "#22170C"
+          }
+        ],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      },
+      {
+        "$id": "113",
+        "ID": "991b25fb-a920-4ef7-9bb5-82eca9914228",
+        "Name": null,
+        "Project": {
+          "$ref": "106"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "114",
+    "ID": "5b8e1878-28c6-4e72-bde3-0fb7eeb5c500",
+    "Name": "fas",
+    "AmountOfPixels": 123,
+    "Scenes": [
+      {
+        "$id": "115",
+        "ID": "a7a0494f-cd4f-484a-9568-21635715cc21",
+        "Name": null,
+        "Project": {
+          "$ref": "114"
+        },
+        "NewPixels": [
+          {
+            "$id": "116",
+            "PixelIndex": 0,
+            "PixelColor": "#22170C"
+          },
+          {
+            "$id": "117",
+            "PixelIndex": 16,
+            "PixelColor": "#22170C"
+          }
+        ],
+        "NewBrightness": 255,
+        "DelayBetweenPixels": 255,
+        "DelayToNextScene": 12
+      },
+      {
+        "$id": "118",
+        "ID": "90410e88-c5aa-4068-b5ab-2465fa5d98ad",
+        "Name": null,
+        "Project": {
+          "$ref": "114"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "119",
+    "ID": "dbb0b39d-c33a-475d-928b-085c1dcdbc0c",
+    "Name": "fasd",
+    "AmountOfPixels": 5,
+    "Scenes": [
+      {
+        "$id": "120",
+        "ID": "dab50ee8-973b-4a58-8b04-68a9a7b4ee0b",
+        "Name": null,
+        "Project": {
+          "$ref": "119"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "121",
+    "ID": "5a20f002-f408-48c9-a73b-e28b6874eac3",
+    "Name": "123",
+    "AmountOfPixels": 5,
+    "Scenes": [
+      {
+        "$id": "122",
+        "ID": "7a9e9a95-4c5f-4420-98b1-d6ab1943ef3d",
+        "Name": null,
+        "Project": {
+          "$ref": "121"
+        },
+        "NewPixels": [
+          {
+            "$id": "123",
+            "PixelIndex": 0,
+            "PixelColor": "#C0392B"
+          },
+          {
+            "$id": "124",
+            "PixelIndex": 1,
+            "PixelColor": "#C0392B"
+          },
+          {
+            "$id": "125",
+            "PixelIndex": 2,
+            "PixelColor": "#C0392B"
+          },
+          {
+            "$id": "126",
+            "PixelIndex": 3,
+            "PixelColor": "#C0392B"
+          },
+          {
+            "$id": "127",
+            "PixelIndex": 4,
+            "PixelColor": "#C0392B"
+          }
+        ],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      },
+      {
+        "$id": "128",
+        "ID": "c45b6ac2-28ac-4614-bf37-b30db9e02eeb",
+        "Name": null,
+        "Project": {
+          "$ref": "121"
         },
         "NewPixels": [],
         "NewBrightness": null,
