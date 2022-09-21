@@ -6,7 +6,7 @@
 
 
 <div class="pixelUI">
-    <ProgrammableLEDUI.Components.PixelUI PixelGetClicked="PixelClicked" Project="project" CurrentScene="currentScene" />
+    <ProgrammableLEDUI.Components.PixelUI  PixelGetClicked="PixelClicked" Project="project" CurrentScene="currentScene" />
 </div>
 <div class="sceneOverview">
     <ProgrammableLEDUI.Components.SceneOverview SceneSelectionChanged="CurrentSceneChanged" Project="project" NewSceneAdded="NewSceneAdded" />
@@ -16,7 +16,7 @@
         <ProgrammableLEDUI.Components.PropertyScene Scene="currentScene" />
     </div>
     <div class="propertyScene">
-        <ProgrammableLEDUI.Components.PropertyPixel Pixel="currentPixel" />
+        <ProgrammableLEDUI.Components.PropertyPixel PropertyChanged="PropertyChanged" Pixel="currentPixel" />
     </div>
     <div class="propertyScene">
         <ProgrammableLEDUI.Components.TranspileScene Scene="currentScene" />
@@ -60,5 +60,11 @@
             currentScene.NewPixels.Add(pixel);
         }
         currentPixel = pixel;
+    }
+
+
+    async Task PropertyChanged(string property)
+    {
+        StateHasChanged();
     }
 }
