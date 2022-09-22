@@ -2,21 +2,48 @@
 @using BlazorColorPicker
 @if (Pixel != null)
 {
-<p>Pixel Index</p>
+    <p>Pixel Index</p>
 }
 
+<button class="btn btn-danger" @onclick="RemovePixel">
+    <div class="buttonColor"></div>🗑️ Remove Pixel
+</button>
+
 <button class="btn btn-primary" @onclick="OpenModal">
-    <div style="background-color:@color" class="buttonColor"></div> Select a Color
+    <div style="background-color:@color" class="buttonColor"></div> Pixel Color
 </button>
 
 <ColorPicker Title="My Blazor ColorPicker" IsOpened="isOpened" Closed="ClosedEvent" MyColor="@color">
 </ColorPicker>
 
+<input @bind-value="ColorInput" type="text" />
+
 
 
 @code {
+
+    private LEDPixelModel pixel { get; set; }
+    private string colorInput { get; set; }
+
+
     [Parameter]
-    public LEDPixelModel Pixel { get; set; }
+    public LEDPixelModel Pixel
+    {
+        get { return pixel; }
+        set { pixel = value;
+            StateHasChanged();
+            if(value!=null)
+            {
+                colorInput = value.PixelColor.ToArgbHex();
+                color = colorInput;
+            }
+        }
+    }
+
+
+    [Parameter]
+    public EventCallback<LEDPixelModel> PixelRemoved { get; set; }
+
 
 
     [Parameter]
@@ -24,6 +51,26 @@
 
     bool isOpened = false;
     string color = "#F1F7E9";
+
+    public string ColorInput
+    {
+        get
+        {
+            return colorInput;
+        }
+        set
+        {
+            colorInput = value;
+            ClosedEvent(value);
+        }
+    }
+
+
+
+    async Task RemovePixel()
+    {
+        await PixelRemoved.InvokeAsync(Pixel);
+    }
 
     void OpenModal()
     {
@@ -33,10 +80,12 @@
     void ClosedEvent(string value)
     {
         color = value;
+        colorInput = value;
         isOpened = false;
         Pixel.PixelColor = Color.FromArgb(value);
         PropertyChanged.InvokeAsync("Color");
+        StateHasChanged();
     }
 }
 
-}
+

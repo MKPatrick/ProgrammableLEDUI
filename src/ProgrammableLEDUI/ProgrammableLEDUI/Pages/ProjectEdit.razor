@@ -16,7 +16,7 @@
         <ProgrammableLEDUI.Components.PropertyScene Scene="currentScene" />
     </div>
     <div class="propertyScene">
-        <ProgrammableLEDUI.Components.PropertyPixel PropertyChanged="PropertyChanged" Pixel="currentPixel" />
+        <ProgrammableLEDUI.Components.PropertyPixel PixelRemoved="PixelRemoved" PropertyChanged="PropertyChanged" Pixel="currentPixel" />
     </div>
     <div class="propertyScene">
         <ProgrammableLEDUI.Components.TranspileScene Scene="currentScene" />
@@ -46,6 +46,12 @@
         projectService.SaveProject(project);
     }
 
+
+    async Task PixelRemoved(LEDPixelModel pixel)
+    {
+        currentScene.NewPixels.Remove(pixel);
+        currentPixel = null;
+    }
 
     async Task CurrentSceneChanged(SceneModel scene)
     {

@@ -2305,5 +2305,143 @@
         "DelayToNextScene": null
       }
     ]
+  },
+  {
+    "$id": "239",
+    "ID": "0e20947e-84fc-4c16-921a-7101b25d4d97",
+    "Name": "test",
+    "AmountOfPixels": 6,
+    "Scenes": [
+      {
+        "$id": "240",
+        "ID": "98d6fd09-2b2d-4120-a7ab-6a5f288919b9",
+        "Name": null,
+        "Project": {
+          "$ref": "239"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "241",
+    "ID": "f22cb64e-ce36-46ea-9847-2027375cfbf0",
+    "Name": "fas",
+    "AmountOfPixels": 12,
+    "Scenes": [
+      {
+        "$id": "242",
+        "ID": "e6fe6b13-7f22-44c9-9e40-3efefd0f4725",
+        "Name": null,
+        "Project": {
+          "$ref": "241"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "243",
+    "ID": "5178a6d6-9b2e-493d-b06e-391962b365fc",
+    "Name": "fas",
+    "AmountOfPixels": 5,
+    "Scenes": [
+      {
+        "$id": "244",
+        "ID": "c28b45fe-3dca-4d07-9c20-931b1f57c86d",
+        "Name": "Fas",
+        "Project": {
+          "$ref": "243"
+        },
+        "NewPixels": [
+          {
+            "$id": "245",
+            "PixelIndex": 4,
+            "PixelColor": "#C0392B"
+          }
+        ],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      },
+      {
+        "$id": "246",
+        "ID": "94233337-ed07-44cb-8eab-251afaf750ec",
+        "Name": null,
+        "Project": {
+          "$ref": "243"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "247",
+    "ID": "434c37ba-09b2-44b5-b064-3d0d4fbf16a2",
+    "Name": "fas",
+    "AmountOfPixels": 5,
+    "Scenes": [
+      {
+        "$id": "248",
+        "ID": "81fcebc4-a530-4d9b-bea3-2878c4ca1ff8",
+        "Name": null,
+        "Project": {
+          "$ref": "247"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "249",
+    "ID": "79bc7f74-be53-46d8-9b17-ee5d083df3b9",
+    "Name": "fas",
+    "AmountOfPixels": 5,
+    "Scenes": [
+      {
+        "$id": "250",
+        "ID": "6f8a7e30-8534-47bc-a0fc-37908209c5c0",
+        "Name": null,
+        "Project": {
+          "$ref": "249"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "251",
+    "ID": "23a8eb1e-73c7-460f-8be5-95f586ebc2b2",
+    "Name": "fas",
+    "AmountOfPixels": 7,
+    "Scenes": [
+      {
+        "$id": "252",
+        "ID": "7978c22b-cc1c-4036-bc02-c77aea1dfdd4",
+        "Name": null,
+        "Project": {
+          "$ref": "251"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
   }
 ]
