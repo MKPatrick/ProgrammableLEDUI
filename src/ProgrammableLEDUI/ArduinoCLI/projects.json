@@ -2443,5 +2443,57 @@
         "DelayToNextScene": null
       }
     ]
+  },
+  {
+    "$id": "253",
+    "ID": "3931e1a7-df41-4cdf-aaff-b72c70d68a30",
+    "Name": "das",
+    "AmountOfPixels": 0,
+    "Scenes": [
+      {
+        "$id": "254",
+        "ID": "fe093b4e-bce3-48b6-88dd-aa49a95b1432",
+        "Name": null,
+        "Project": {
+          "$ref": "253"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
+  },
+  {
+    "$id": "255",
+    "ID": "bc7634ea-fef4-4ad7-bbb5-109fa6ccdeb8",
+    "Name": "DAS",
+    "AmountOfPixels": 6,
+    "Scenes": [
+      {
+        "$id": "256",
+        "ID": "4b1a2cca-0961-47b6-a0fe-ba9b8c102aa3",
+        "Name": null,
+        "Project": {
+          "$ref": "255"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      },
+      {
+        "$id": "257",
+        "ID": "a6170df7-beda-42b2-8734-26e201a5db0b",
+        "Name": null,
+        "Project": {
+          "$ref": "255"
+        },
+        "NewPixels": [],
+        "NewBrightness": null,
+        "DelayBetweenPixels": null,
+        "DelayToNextScene": null
+      }
+    ]
   }
 ]

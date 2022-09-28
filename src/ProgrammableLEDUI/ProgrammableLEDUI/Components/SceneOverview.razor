@@ -1,4 +1,4 @@
-﻿
+﻿@inject NavigationManager navigationManager;
 
 
 <div class="rowCustom">
@@ -21,6 +21,13 @@
             Create new Scene➕
         </p>
     </div>
+
+    <div class="cardGlass sceneItem" @onclick="Transpile">
+        <p>
+            Transpile All 🙌
+        </p>
+    </div>
+
 
 
 </div>
@@ -53,6 +60,10 @@
         await SceneSelectionChanged.InvokeAsync((scene));
     }
 
+    async Task Transpile()
+    {
+        navigationManager.NavigateTo($"/TargetSelection/{Project.ID}");
+    }
 
 
 }

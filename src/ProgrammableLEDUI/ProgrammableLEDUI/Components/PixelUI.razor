@@ -1,4 +1,4 @@
-﻿<h3>PixelUI</h3>
+﻿
 
 @foreach(var pixel in pixels)
 {
@@ -55,7 +55,7 @@
         {
             if(pixels[i]==null)
             {
-                pixels[i] = new LEDPixelModel() { PixelColor = Color.FromHex("#c0392b"), PixelIndex = i };
+                pixels[i] = new LEDPixelModel() { PixelColor = Color.FromHex("#000000"), PixelIndex = i };
             }
         }
     

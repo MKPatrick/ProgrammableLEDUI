@@ -1,0 +1,28 @@
+﻿@inject Services.ITranspileService transpileService;
+@inject Services.IProjectService projectService;
+@page "/TargetSelection/{identifier}"
+
+<h3>TargetSelection</h3>
+<label for="inputPort">COM-Port</label>
+<input type="text" @bind-value=Target class="form-control" id="inputPort" aria-describedby="inputHelper" placeholder="Enter your COM-Port">
+<small id="inputHelper" class="form-text text-muted">Enter the port where your ESP is connected</small>
+<br/>
+<textarea cols="190" rows="220">
+    @CodeTranspiled
+</textarea>
+<br/>
+<button class="text-center center btn btn-primary">Compile and Upload!</button>
+
+@code {
+    [Parameter]
+    public string identifier { get; set; }
+    string Target { get; set; }
+    string CodeTranspiled { get; set; }
+    private ProjectModel project;
+
+    protected override async Task OnInitializedAsync()
+    {
+        project = projectService.GetProjectByID(identifier);
+        CodeTranspiled = transpileService.TranspileScenesToCode(project.Scenes);
+    }
+}

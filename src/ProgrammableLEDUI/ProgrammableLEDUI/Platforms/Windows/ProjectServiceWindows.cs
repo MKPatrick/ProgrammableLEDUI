@@ -59,7 +59,7 @@ namespace ProgrammableLEDUI.Platforms.Windows
         }
 
 
-        private void SaveAllProjects()
+        public void SaveAllProjects()
         {
             string json = JsonConvert.SerializeObject(_allProjects, Formatting.Indented,
      new JsonSerializerSettings { PreserveReferencesHandling = PreserveReferencesHandling.Objects });

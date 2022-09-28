@@ -33,13 +33,13 @@
         
         @foreach(var item in projects)
          {
-            <div class="col-3">
+            <div class="col-3" >
                 <div class="card cardhover">
                     <img class="card-img-top" width="150" height="150" src="https://cdn-learn.adafruit.com/guides/cropped_images/000/001/024/medium640/Screen_Shot_2015-05-07_at_8.19.13_AM.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">@item.Name</h5>
                         <p class="card-text">Your project.</p>
-                        <a href="#" class="btn btn-primary">Work with me!😶</a>
+                        <button @onclick="()=>EditProject(item)" class="btn btn-primary">Work with me!😶</button>
                     </div>
                 </div>
             </div>
@@ -65,5 +65,11 @@
     async Task CreateNewProject()
     {
         navigationmanager.NavigateTo("/NewProject");
+    }
+
+
+    async Task EditProject(ProjectModel project)
+    {
+        navigationmanager.NavigateTo($"/ProjectEdit/{project.ID}");
     }
 }

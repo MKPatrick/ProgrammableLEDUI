@@ -1,9 +1,38 @@
 ﻿@inherits LayoutComponentBase
-
+@inject NavigationManager navigationManager;
+@inject Services.IProjectService projectService;
 <div class="page">
 	<main>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <button @onclick="NavigateHome" class="btn  btn-light">🏠 Home </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn  btn-light">💾 Save All </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn  btn-light">🛠️ Settings </button>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
 		<article class="content">
 			@Body
 		</article>
 	</main>
 </div>
+@code{
+
+    async Task NavigateHome()
+    {
+        navigationManager.NavigateTo("/");
+    }
+
+    async Task SaveAll()
+    {
+        projectService.SaveAllProjects();
+    }
+}
