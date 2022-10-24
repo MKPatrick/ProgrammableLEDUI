@@ -1,10 +1,11 @@
 ﻿@inject Services.ITranspileService transpileService;
 <h3>TranspileScene</h3>
 <button @onclick="Transpile" class="button button-primary">Transpile</button>
+<div class="w-100">
 <textarea>
     @transpiledSource
 </textarea>
-
+</div>
 @code {
     [Parameter]
     public SceneModel Scene { get; set; }

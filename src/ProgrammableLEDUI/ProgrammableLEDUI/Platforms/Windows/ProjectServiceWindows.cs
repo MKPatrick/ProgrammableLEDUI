@@ -11,7 +11,7 @@ namespace ProgrammableLEDUI.Platforms.Windows
 {
     internal class ProjectServiceWindows : IProjectService
     {
-        private const string PROJECTSPath = "C:\\Develop\\ProgrammableLEDUI\\src\\ProgrammableLEDUI\\ArduinoCLI\\projects.json";
+        private  string PROJECTSPath = $"{System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}\\projects.json";
         private List<ProjectModel> _allProjects;
 
         public ProjectServiceWindows()

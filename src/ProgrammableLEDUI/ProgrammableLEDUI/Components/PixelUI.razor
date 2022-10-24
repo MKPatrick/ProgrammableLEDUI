@@ -2,7 +2,7 @@
 
 @foreach(var pixel in pixels)
 {
-    <div @onclick="()=>PixelClicked(pixel)" style="display: inline-block">
+    <div  @onclick="()=>PixelClicked(pixel)" style="display: inline-block">
         <SinglePixel Pixel="pixel" />
     </div>
 }
@@ -41,6 +41,7 @@
     {
         await PixelGetClicked.InvokeAsync(pixel);
     }
+
 
     void UpdatePixels()
     {

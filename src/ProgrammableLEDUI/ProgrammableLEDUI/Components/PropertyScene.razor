@@ -1,4 +1,4 @@
-﻿<h3>PropertyScene @Scene?.Name</h3>
+﻿<h3>Property <b class="text-center"> @Scene?.Name</b></h3>
 <div class="form-group">
     <label for="Name">Scene Name</label>
     <input @bind-value=@Scene.Name type="text" class="form-control" id="Name" placeholder="Scene Name">
@@ -19,7 +19,7 @@
 
 
 <div class="form-group">
-    <label for="DelayToNextScene">Delay Pixels</label>
+    <label for="DelayToNextScene">Delay to next Scene</label>
     <input @bind-value=@Scene.DelayToNextScene type="number" class="form-control" id="DelayToNextScene" placeholder="Delay to next scene">
 </div>
 
